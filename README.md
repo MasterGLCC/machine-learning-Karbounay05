@@ -29,4 +29,7 @@ Le dataset utilisé se trouve dans :
 
 ---
 
-## 3. Structure du projet
+- On estime **a** et **b** à partir des données  
+- Ce modèle permet de **prévoir la note à partir du nombre d’heures d’étude**  
+- C’est une approche simple mais pédagogique pour comprendre la régression linéaire
+
