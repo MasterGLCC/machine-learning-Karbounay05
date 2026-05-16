@@ -1,110 +1,233 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/jyj5d-5u)
 
-Code Python de régression linéaire simple, multiple et polynomiale (from scratch et avec bibliothèque scikit-learn).
+# Machine Learning Projects - GLCC
 
--------------------------------------------------------------------------------------------
+## Description
 
-# Dataset : Performance des étudiants
+Ce repository contient plusieurs mini projets de Machine Learning réalisés en Python dans le cadre des travaux pratiques du Master GLCC.
 
-## Objectif
+Les projets sont développés :
+- soit from scratch avec NumPy,
+- soit avec des bibliothèques comme scikit-learn.
 
-Dans ce travail, on cherche à prédire la note finale d’un étudiant sur 20 en fonction de plusieurs facteurs liés à ses habitudes (étude, sommeil, stress, etc.).
-
----
-
-## Description des variables
-
-- Heures d’étude : nombre d’heures d’étude par jour  
-- Sommeil : nombre d’heures de sommeil par nuit  
-- Stress : niveau de stress (entre 1 et 10)  
-- Participation : participation en classe (en %)  
-- Activité sportive : nombre d’heures de sport par semaine  
-- Temps écran : temps passé sur les écrans (heures par jour)  
-- Note finale : note obtenue par l’étudiant (/20)
+L’objectif principal est de comprendre le fonctionnement des algorithmes de Machine Learning, les méthodes de prédiction et les techniques d’analyse de données.
 
 ---
 
-## Données
+# Sujet du projet
 
-| Heures étude | Sommeil | Stress | Participation | Sport | Temps écran | Note |
-|--------------|---------|--------|--------------|-------|-------------|------|
-| 2            | 5       | 8      | 20           | 0     | 6           | 10   |
-| 4            | 6       | 6      | 40           | 2     | 5           | 13   |
-| 6            | 7       | 5      | 60           | 3     | 4           | 15   |
-| 8            | 7       | 4      | 80           | 4     | 3           | 17   |
-| 10           | 8       | 3      | 90           | 5     | 2           | 18.5 |
-| 3            | 4       | 9      | 30           | 0     | 7           | 11   |
-| 7            | 6       | 5      | 70           | 3     | 4           | 16   |
+Le sujet principal de plusieurs notebooks est l’analyse de la performance des étudiants à partir de différentes variables académiques et personnelles.
+
+Le but est de construire des modèles capables :
+- de prédire la note finale,
+- de classifier les étudiants,
+- d’analyser les facteurs influençant la réussite,
+- d’appliquer différents algorithmes de Machine Learning sur les mêmes données.
 
 ---
 
-# Modèles utilisés
-
-## 1. Régression linéaire simple
-
-On modélise la relation entre une seule variable et la note :
-
-Note = a · Heures + b
-
-Ce modèle permet d’étudier uniquement l’impact des heures d’étude sur la performance.
-
----
-
-## 2. Régression linéaire multiple
-
-On généralise le modèle en utilisant toutes les variables explicatives :
-
-Note =
-a₁·Heures +
-a₂·Sommeil +
-a₃·Stress +
-a₄·Participation +
-a₅·Sport +
-a₆·Ecran +
-b
-
-Ce modèle suppose que chaque variable contribue de manière indépendante et linéaire à la note finale.
-
----
-
-## 3. Régression polynomiale
-
-On introduit des transformations non linéaires des variables pour capturer des relations plus complexes :
-
-Note =
-a₁·Heures +
-a₂·Sommeil² +
-a₃·Stress³ +
-a₄·Participation⁴ +
-a₅·Sport⁵ +
-a₆·Ecran⁶ +
-b
-
-Ce modèle permet de représenter des effets non linéaires et des interactions plus complexes entre les variables.
-
----
-
-# Implémentation
-
-Le projet contient deux approches :
-
-## 1. From scratch
-- Utilisation de l’équation normale
-- Calcul manuel des coefficients W
-- Manipulation directe de NumPy
-
-## 2. Avec scikit-learn
-- Utilisation de LinearRegression
-- Utilisation de PolynomialFeatures
-- Optimisation automatique des paramètres
-
----
-
-# Objectif pédagogique
+# Objectifs pédagogiques
 
 Ce projet permet de comprendre :
 
-- Le fonctionnement de la régression linéaire
-- L’impact des variables sur une prédiction
-- La différence entre modèle linéaire et non linéaire
-- L’utilisation des outils de machine learning modernes
+| Objectif | Description |
+|---|---|
+| Régression | Prédire une valeur numérique |
+| Classification | Classer des données dans plusieurs catégories |
+| Clustering | Regrouper automatiquement des données similaires |
+| Réduction de dimension | Simplifier les données tout en gardant l’information importante |
+| Reinforcement Learning | Apprendre automatiquement à partir des actions |
+
+---
+
+# Algorithmes étudiés
+
+| Domaine | Algorithmes |
+|---|---|
+| Régression | Régression linéaire simple, multiple, polynomiale |
+| Classification | KNN, SVM, Naive Bayes, Régression logistique |
+| Arbres de décision | ID3, CART, C4.5, Random Forest |
+| Clustering | DBSCAN |
+| Réduction de dimension | PCA |
+| Boosting | XGBoost |
+| Reinforcement Learning | Q-Learning |
+
+---
+
+# Technologies utilisées
+
+| Technologie | Utilisation |
+|---|---|
+| Python | Langage principal |
+| NumPy | Calcul scientifique |
+| Pandas | Manipulation des données |
+| Matplotlib | Visualisation graphique |
+| Scikit-learn | Algorithmes de Machine Learning |
+| Jupyter Notebook | Exécution des notebooks |
+
+---
+
+# Dataset utilisé
+
+Plusieurs projets utilisent un dataset représentant les performances des étudiants.
+
+## Variables utilisées
+
+| Variable | Description |
+|---|---|
+| Heures étude | Nombre d’heures d’étude par jour |
+| Sommeil | Nombre d’heures de sommeil |
+| Stress | Niveau de stress |
+| Participation | Participation en classe |
+| Sport | Activité sportive |
+| Temps écran | Temps passé sur les écrans |
+| Note finale | Résultat final de l’étudiant |
+
+---
+
+# Exemple de données
+
+| Heures étude | Sommeil | Stress | Participation | Sport | Temps écran | Note finale |
+|---|---|---|---|---|---|---|
+| 2 | 5 | 8 | 20 | 0 | 6 | 10 |
+| 4 | 6 | 6 | 40 | 2 | 5 | 13 |
+| 6 | 7 | 5 | 60 | 3 | 4 | 15 |
+| 8 | 7 | 4 | 80 | 4 | 3 | 17 |
+| 10 | 8 | 3 | 90 | 5 | 2 | 18.5 |
+
+---
+
+# Modèles de régression étudiés
+
+## Régression linéaire simple
+
+Ce modèle étudie la relation entre une seule variable et la note finale.
+
+
+::contentReference[oaicite:0]{index=0}
+
+
+Exemple :
+- x = heures d’étude
+- y = note finale
+
+---
+
+## Régression linéaire multiple
+
+Ce modèle utilise plusieurs variables explicatives.
+
+:contentReference[oaicite:1]{index=1}
+
+Exemple :
+- heures d’étude,
+- sommeil,
+- stress,
+- participation.
+
+---
+
+## Régression polynomiale
+
+Ce modèle permet de représenter des relations non linéaires.
+
+:contentReference[oaicite:2]{index=2}
+
+---
+
+# Structure du repository
+
+```bash
+.
+├── regressionLineaireFromScratch.ipynb
+├── regressionMultipleFromScratch.ipynb
+├── regressionPolynomialWithLibrary.ipynb
+├── svm_session_normale.ipynb
+├── dbscan_session_normale.ipynb
+├── xgboostFromScratchSessionNormale.ipynb
+├── pcaFromScratchSessionNormale.ipynb
+├── q_learning_fonction_approximation_session_normale.ipynb
+├── README.md
+```
+
+---
+
+# Approches utilisées
+
+| Approche | Description |
+|---|---|
+| From Scratch | Implémentation manuelle des algorithmes |
+| Avec bibliothèque | Utilisation de scikit-learn et autres bibliothèques |
+
+---
+
+# Étapes générales des projets
+
+| Étape | Description |
+|---|---|
+| Prétraitement | Nettoyage et préparation des données |
+| Entraînement | Construction du modèle |
+| Test | Évaluation des performances |
+| Visualisation | Affichage des résultats |
+| Prédiction | Utilisation du modèle sur de nouvelles données |
+
+---
+
+# Installation
+
+Cloner le repository :
+
+```bash
+git clone https://github.com/MasterGLCC/machine-learning-Karbounay05.git
+```
+
+Entrer dans le dossier :
+
+```bash
+cd machine-learning-Karbounay05
+```
+
+Installer les dépendances :
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+# Exécution
+
+Lancer Jupyter Notebook :
+
+```bash
+jupyter notebook
+```
+
+Puis ouvrir le notebook souhaité.
+
+---
+
+# Exemple de notebooks disponibles
+
+| Notebook | Sujet |
+|---|---|
+| regressionLineaireFromScratch.ipynb | Régression linéaire |
+| regressionMultipleFromScratch.ipynb | Régression multiple |
+| regressionPolynomialWithLibrary.ipynb | Régression polynomiale |
+| svm_session_normale.ipynb | SVM |
+| dbscan_session_normale.ipynb | DBSCAN |
+| pcaFromScratchSessionNormale.ipynb | PCA |
+| xgboostFromScratchSessionNormale.ipynb | XGBoost |
+| q_learning_fonction_approximation_session_normale.ipynb | Q-Learning |
+
+---
+
+# Auteur
+
+Projet réalisé dans le cadre du Master GLCC.
+
+---
+
+# Repository GitHub
+
+:contentReference[oaicite:3]{index=3}
